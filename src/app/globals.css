@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #05070a;
+  --color-bg-elevated: #0a0e14;
+  --color-bg-card: #0d1117;
+  --color-border: #1e242c;
+  --color-border-strong: #2a323d;
+  --color-text: #e8eaed;
+  --color-text-muted: #8b94a3;
+  --color-text-faint: #5b6573;
+  --color-accent: #5b8cff;
+  --color-accent-dim: #3a5bb8;
+  --color-accent-soft: rgba(91, 140, 255, 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-card: var(--color-bg-card);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-faint: var(--color-text-faint);
+  --color-accent: var(--color-accent);
+  --color-accent-dim: var(--color-accent-dim);
+  --color-accent-soft: var(--color-accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Subtle scrollbar that fits the dark, technical aesthetic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-faint);
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Typing cursor used in the hero tagline */
+.typing-cursor::after {
+  content: "|";
+  margin-left: 2px;
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Gradient text used sparingly for emphasis */
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-text) 30%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
