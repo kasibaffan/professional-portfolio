@@ -25,7 +25,7 @@ export const siteConfig = {
 
   links: {
     github: "https://github.com/kasibaffan",
-    linkedin: "https://www.linkedin.com/in/mohammad-kasib-affan",
+    linkedin: "https://www.linkedin.com/in/mohammad-kasib-affan-b760a3288",
     instagram: "https://www.instagram.com/im_kasib",
   },
 
