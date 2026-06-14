@@ -19,7 +19,7 @@ export const siteConfig = {
 
   // Contact details — replace with real values before deploying.
   email: "mohammadkasibaffan@gmail.com",
-  phone: "+91 00000 00000",
+  phone: "+91 63833 97770",
 
   githubUsername: "kasibaffan",
 
